@@ -1,26 +1,29 @@
 // Handle form submission
-document.getElementById("notifyForm").addEventListener("submit", function (e) {
-  e.preventDefault();
+const notifyForm = document.getElementById("notifyForm");
+if (notifyForm) {
+  notifyForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  const emailInput = this.querySelector(".email-input");
-  const email = emailInput.value;
+    const emailInput = this.querySelector(".email-input");
+    const email = emailInput.value;
 
-  // Validate email
-  if (!email || !isValidEmail(email)) {
-    showMessage("Please enter a valid email address", "error");
-    return;
-  }
+    // Validate email
+    if (!email || !isValidEmail(email)) {
+      showMessage("Please enter a valid email address", "error");
+      return;
+    }
 
-  // Simulate API call
-  // In production, you would send this to your backend
-  console.log("Email submitted:", email);
+    // Simulate API call
+    // In production, you would send this to your backend
+    console.log("Email submitted:", email);
 
-  // Show success message
-  showMessage("Thanks! We'll notify you when we launch.", "success");
+    // Show success message
+    showMessage("Thanks! We'll notify you when we launch.", "success");
 
-  // Clear form
-  emailInput.value = "";
-});
+    // Clear form
+    emailInput.value = "";
+  });
+}
 
 function isValidEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

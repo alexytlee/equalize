@@ -1,15 +1,15 @@
 # Equalize.fi Landing Page
 
-A modern, responsive landing page for Equalize - a next-generation RWA (Real World Assets) protocol.
+A modern, responsive landing page for Equalize - a licensed crypto OTC trading desk in Hong Kong.
 
 ## Features
 
 - 🎨 Modern, gradient-based design
 - 📱 Fully responsive layout
-- ✨ Smooth animations and transitions
-- 🎯 Email notification form
+- ✨ Netflix-level smooth animations
+- 🌐 Multi-language support (EN, 繁體中文, 简体中文)
 - ⚡ Fast and lightweight
-- 🌐 SEO-friendly
+- ♿ Accessibility features (reduced motion support)
 
 ## Getting Started
 
@@ -36,11 +36,38 @@ Then open `http://localhost:8000` in your browser.
 
 ```
 equalize/
-├── index.html      # Main HTML file
-├── styles.css      # Stylesheet
-├── script.js       # JavaScript functionality
+├── index.html      # Main landing page
+├── prices.html     # Live prices page with multi-source quotes
+├── styles.css      # Global stylesheet
+├── script.js       # Main page JavaScript
+├── prices.js       # Price fetching from multiple APIs
+├── i18n.js         # Internationalization (EN, 繁體中文, 简体中文)
 └── README.md       # This file
 ```
+
+## Features
+
+### Live Price Quotes
+
+The prices page (`prices.html`) displays real-time cryptocurrency prices from multiple sources:
+
+- **CoinGecko** - Market data and 24h price changes
+- **Binance** - World's largest crypto exchange
+- **Coinbase** - Leading US crypto exchange
+- **Kraken** - Major institutional exchange
+- **Bitfinex** - Professional trading platform
+- **OKX** - Global crypto exchange
+
+#### Price Features:
+
+- ✨ **Flash Animations** - Prices flash green when going up, red when going down
+- 🔄 **Auto-refresh** - Updates every 30 seconds with countdown timer
+- 📊 **24h Change** - Shows percentage change with color indicators
+- 📱 **Fully Responsive** - Optimized for desktop, laptop, tablet, and mobile
+- 🎯 **Multi-source** - Compare prices across 6 major exchanges
+- ⚡ **Real-time** - All data fetched from free public APIs
+
+Prices are fetched from free public APIs with proper rate limiting to ensure reliability.
 
 ## Customization
 

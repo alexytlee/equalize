@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Equalize - Real-time Crypto OTC Price Quotes"
+    />
+    <title>Live Market Prices - Equalize</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="back-link">
+          <span>←</span>
+          <span data-i18n="nav.backToHome">Back to Home</span>
+        </a>
+        <div class="language-toggle">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh-TW">繁</button>
+          <button class="lang-btn" data-lang="zh-CN">简</button>
+        </div>
+      </nav>
+
+      <main class="prices-page">
+        <div class="prices-header">
+          <h1 class="page-title" data-i18n="prices.title">
+            Live Market Prices
+          </h1>
+          <p class="page-subtitle" data-i18n="prices.subtitle">
+            Real-time pricing from 6 major exchanges • Updated every 30 seconds
+          </p>
+        </div>
+
+        <div class="prices-container">
+          <div class="table-wrapper">
+            <table class="prices-table" id="pricesTable">
+              <thead>
+                <tr>
+                  <th class="asset-col" data-i18n="table.asset">Asset</th>
+                  <th class="source-col" data-i18n="exchange.coingecko">
+                    CoinGecko
+                  </th>
+                  <th class="source-col" data-i18n="exchange.binance">
+                    Binance
+                  </th>
+                  <th class="source-col" data-i18n="exchange.coinbase">
+                    Coinbase
+                  </th>
+                  <th class="source-col" data-i18n="exchange.kraken">Kraken</th>
+                  <th class="source-col" data-i18n="exchange.bitfinex">
+                    Bitfinex
+                  </th>
+                  <th class="source-col" data-i18n="exchange.okx">OKX</th>
+                  <th class="change-col" data-i18n="table.change">
+                    24h Change
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-symbol="btc">
+                  <td class="asset-cell">
+                    <span class="asset-symbol">BTC</span>
+                    <span class="asset-name" data-i18n="asset.btc"
+                      >Bitcoin</span
+                    >
+                  </td>
+                  <td class="price-cell loading" data-source="coingecko">--</td>
+                  <td class="price-cell loading" data-source="binance">--</td>
+                  <td class="price-cell loading" data-source="coinbase">--</td>
+                  <td class="price-cell loading" data-source="kraken">--</td>
+                  <td class="price-cell loading" data-source="bitfinex">--</td>
+                  <td class="price-cell loading" data-source="okx">--</td>
+                  <td class="change-cell loading">--</td>
+                </tr>
+                <tr data-symbol="eth">
+                  <td class="asset-cell">
+                    <span class="asset-symbol">ETH</span>
+                    <span class="asset-name" data-i18n="asset.eth"
+                      >Ethereum</span
+                    >
+                  </td>
+                  <td class="price-cell loading" data-source="coingecko">--</td>
+                  <td class="price-cell loading" data-source="binance">--</td>
+                  <td class="price-cell loading" data-source="coinbase">--</td>
+                  <td class="price-cell loading" data-source="kraken">--</td>
+                  <td class="price-cell loading" data-source="bitfinex">--</td>
+                  <td class="price-cell loading" data-source="okx">--</td>
+                  <td class="change-cell loading">--</td>
+                </tr>
+                <tr data-symbol="sol">
+                  <td class="asset-cell">
+                    <span class="asset-symbol">SOL</span>
+                    <span class="asset-name" data-i18n="asset.sol">Solana</span>
+                  </td>
+                  <td class="price-cell loading" data-source="coingecko">--</td>
+                  <td class="price-cell loading" data-source="binance">--</td>
+                  <td class="price-cell loading" data-source="coinbase">--</td>
+                  <td class="price-cell loading" data-source="kraken">--</td>
+                  <td class="price-cell loading" data-source="bitfinex">--</td>
+                  <td class="price-cell loading" data-source="okx">--</td>
+                  <td class="change-cell loading">--</td>
+                </tr>
+                <tr data-symbol="usdt">
+                  <td class="asset-cell">
+                    <span class="asset-symbol">USDT</span>
+                    <span class="asset-name" data-i18n="asset.usdt"
+                      >Tether</span
+                    >
+                  </td>
+                  <td class="price-cell loading" data-source="coingecko">--</td>
+                  <td class="price-cell loading" data-source="binance">--</td>
+                  <td class="price-cell loading" data-source="coinbase">--</td>
+                  <td class="price-cell loading" data-source="kraken">--</td>
+                  <td class="price-cell loading" data-source="bitfinex">--</td>
+                  <td class="price-cell loading" data-source="okx">N/A</td>
+                  <td class="change-cell loading">--</td>
+                </tr>
+                <tr data-symbol="usdc">
+                  <td class="asset-cell">
+                    <span class="asset-symbol">USDC</span>
+                    <span class="asset-name" data-i18n="asset.usdc"
+                      >USD Coin</span
+                    >
+                  </td>
+                  <td class="price-cell loading" data-source="coingecko">--</td>
+                  <td class="price-cell loading" data-source="binance">--</td>
+                  <td class="price-cell loading" data-source="coinbase">--</td>
+                  <td class="price-cell loading" data-source="kraken">--</td>
+                  <td class="price-cell loading" data-source="bitfinex">--</td>
+                  <td class="price-cell loading" data-source="okx">--</td>
+                  <td class="change-cell loading">--</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="prices-footer">
+            <div class="price-info">
+              <div class="info-item">
+                <span class="info-label" data-i18n="prices.lastUpdated"
+                  >Last Updated:</span
+                >
+                <span class="info-value" id="lastUpdated">--</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label" data-i18n="prices.nextUpdate"
+                  >Next Update In:</span
+                >
+                <span class="info-value" id="countdown">30s</span>
+              </div>
+            </div>
+            <p class="disclaimer" data-i18n="prices.disclaimer">
+              Prices are indicative and for reference only. For large OTC trades
+              and institutional quotes, please contact our trading desk
+              directly.
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2025 Equalize. All rights reserved.</p>
+      </footer>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="prices.js"></script>
+  </body>
+</html>
